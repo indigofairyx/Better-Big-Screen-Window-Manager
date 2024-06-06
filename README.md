@@ -2,7 +2,7 @@
 
 Hello World!
 
-# ![icon](images/MoveTo32x32.png) What is Better Big Screen Window Manager++?
+# ![icon](/Images/MoveTo32x32.png) What is Better Big Screen Window Manager++?
 
 ## Intro & Background
 
