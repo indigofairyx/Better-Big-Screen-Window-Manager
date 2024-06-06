@@ -135,7 +135,7 @@ These are the Hotkeys and Mouse Combos I came up with.
 
 
 > [!note] **Some of these Hotkeys might conflict Window pre-set System Hotkeys**
-> 
+> .
 >> ^^1 - Might conflict with Cortana
 >>
 >> ^^2 - Might conflict with Xbox Game Bar
