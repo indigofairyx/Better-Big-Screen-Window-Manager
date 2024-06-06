@@ -155,7 +155,7 @@ These are the Hotkeys and Mouse Combos I came up with.
 
 
 > [!note] 
-> **Some of these Hotkeys might conflict Window pre-set System Hotkeys**
+> **Some of these Hotkeys might conflict Window's pre-set System Hotkeys**
 > 
 >> ^^1 - `⊞ Win` + `C`  Might conflict with Cortana or Copliot
 >>
@@ -164,7 +164,7 @@ These are the Hotkeys and Mouse Combos I came up with.
 > *Personal I don't use these on my system, have shut off these system keys with [PowerToys](https://github.com/microsoft/PowerToys) Keyboard Manager.*
 > *If you use them you can change them in the `.ahk` script.*
 >
-> ^^3 *Additionally* For decades windows Horizontal Scroll direction felt backward to me, I flipped the direction for this script.
+> ^^3 *Additionally* Windows Horizontal Scroll direction felt backward to me, I flipped the movement direction for this script.
 
 
 # Notes...
