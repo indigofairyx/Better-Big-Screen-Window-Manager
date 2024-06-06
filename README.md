@@ -18,7 +18,7 @@ Much Googling and GitHub searching for such a simple window management task lead
 
 **It's too good not to share.** Especially if you're working with a **oversized** screen, you should give this a try!!!
 
-## What does Better Big Screen Window Manager++ do??
+## ![icon](/Images/MoveTo32x32.png) What does Better Big Screen Window Manager++ do??
 
 Example, A simple quick hotkey to...
 
@@ -32,7 +32,7 @@ I started having fun with AutoHotKey, discovering way to expand & add to AeroSna
 
 I'll add a full list of `Hotkeys` below, but first...
 
-# For the best results `Run as ADMINISTRATOR`
+# ![icon](/Images/MoveTo32x32.png) For the best results `Run as ADMINISTRATOR`
 
 
 > [!note]
@@ -47,7 +47,7 @@ It was defeating the purpose of these hotkeys if I couldn't use them so I added 
 If you are annoyed by the Admin popups at logon (*which I am*) and are not comfortable with turning off `UAC` you can use the Windows Task Scheduler to ticking the `Run with highest privileges` option.
 
 
-# How to run Better Big Screen Window Manager++ 
+# ![icon](/Images/MoveTo32x32.png) How to run Better Big Screen Window Manager++ 
 
 There are two options to use you can...
 
@@ -61,7 +61,7 @@ or
  
 **Note that this options requires that you also install [AutoHotKey](https://www.autohotkey.com) to run the script.** *The added benefit here is that you could change the Hotkeys by editing the script.*
 
-# Hotkey List
+# ![icon](/Images/MoveTo32x32.png) Hotkey List
 
 These are the Hotkeys and Mouse Combos I came up with.
 
