@@ -90,8 +90,12 @@ These are the Hotkeys and Mouse Combos I came up with.
 | `⊞ Win` + `Ctrl` + `Wheel Up`   | Increase\\Grow window size                                               |
 |                                 |                                                                          |
 | ***CLICK & DRAG***              |                                                                          |
-| `⊞ Win` + `Right Button`        | Holding `⊞ Win`, Click & Drag with Right Mouse button to RESIZE a Window |
 | `⊞ Win` + `Left Button`         | Holding `⊞ Win`, Click & Drag with Left Mouse button to MOVE a Window    |
+| `⊞ Win` + `Right Button`        | Holding `⊞ Win`, Click & Drag with Right Mouse button to RESIZE a Window |
+
+> [!note]
+These **Click & Drag** Mouse keys will on any window, even if its not active!! They are very handy!
+
 
 ## ***HOTKEYS***
 
