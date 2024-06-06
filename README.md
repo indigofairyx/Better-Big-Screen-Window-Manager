@@ -141,7 +141,7 @@ These **Click & Drag** Mouse keys will on any window, even if its not active!! T
 |  `⊞ Win` + `Alt` + `Numpad 8`      |  Snap top half of the screen                                                              |
 |  `⊞ Win` + `Alt` + `Numpad 9`      |  Dock\\Snap window top-right                                                              |
 
-###  NUMPAD Keys for Quick {Centered} Window Resizing
+###  NUMPAD Keys for Quick *{{Centered}}* Window Resizing
 
 | `⊞ Win` + `Ctrl` + `Numpad 0` | Resize Active Window to 700x400, centered   |
 | ----------------------------- | ------------------------------------------- |
