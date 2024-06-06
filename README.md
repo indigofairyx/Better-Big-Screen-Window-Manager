@@ -32,8 +32,10 @@ I'll add a full list of `Hotkeys` below, but first...
 # For the best results `Run as ADMINISTRATOR`
 
 
-> [!note] Why does a simple window manager script ask for Admin Control?
-> This Admin prompt allows you to move, resize and control windows that are running with elevated status, ie.. the task manager, Microsoft's own internal config windows, disk clean up and\\or program installers etc. As I mentioned *Microsoft own windows are one of the worst at popping up in the far corner of large screen. Such as the Disk Clean Up Tool.* Without Admin Elavation you cannot move these windows.
+> [!note]
+> **Q.** Why does a simple window manager script ask for Admin Control?
+>
+> **A.** This Admin prompt allows you to move, resize and control windows that are running with elevated status, ie.. the task manager, Microsoft's own internal config windows, disk clean up and\\or program installers etc. As I mentioned *Microsoft own windows are one of the worst at popping up in the far corner of large screen. Such as the Disk Clean Up Tool.* Without Admin Elavation you cannot move these windows.
 
 Windows prevents hotkeys from working in windows that were launched with higher elevation than the AutoHotKey script (such as CMD or Powershell terminals that were launched as Administrator). As a result, AutoHotKey Scripts will only work on these windows if the script itself is `Run as Administrator`, due to the way Windows is designed.
 
@@ -134,8 +136,9 @@ These are the Hotkeys and Mouse Combos I came up with.
 | `⊞ Win` + `Alt` + `Numpad 9`     | Dock\\Snap window top-right                                                             |
 
 
-> [!note] **Some of these Hotkeys might conflict Window pre-set System Hotkeys**
-> .
+> [!note] 
+> **Some of these Hotkeys might conflict Window pre-set System Hotkeys**
+> 
 >> ^^1 - Might conflict with Cortana
 >>
 >> ^^2 - Might conflict with Xbox Game Bar
