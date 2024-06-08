@@ -65,9 +65,12 @@ or
 
 These are the Hotkeys and Mouse Combos I came up with.
 
-> [!note]
->I expanded many of the hotkeys to the **Number Pad** on a *full-sized keyboard,* if you have a short keyboard you can still run this on a big screen as the Resize & Move options are also bound to the Horizontal & Vertical mouse wheels.
 
+I expanded many of the hotkeys to the **Number Pad** on a *full-sized keyboard,* if you have a short keyboard you can still run this on a big screen as the Resize & Move options are also bound to the Horizontal & Vertical mouse wheels.
+
+
+> [!note]
+>Every hotkey in this use the `⊞ Win` in some combination
 
 ## ***SCRIPT CONTROL***
 
@@ -75,6 +78,9 @@ These are the Hotkeys and Mouse Combos I came up with.
 | -------------------------------- | ---------------------------- |
 | `Ctrl` + `Shift` + `Numpad -`    | Reload Window Manager Script |
 | `Ctrl` + `Alt` + `⊞ Win` + `ESC` | Exit Window Manager Script   |
+| `Ctrl` + `Alt` + `⊞ Win` + `I`  | Shortcut to source github page   | 
+| `Ctrl` + `Alt` + `⊞ Win` + `?`  | View Hotkey Cheatsheet  |
+| `Ctrl` + `Alt` + `⊞ Win` + `A` | View About Window |
 
  ## ***MOUSE FUNCTIONS*** 
 
@@ -88,8 +94,9 @@ These are the Hotkeys and Mouse Combos I came up with.
 | `⊞ Win` + `Alt` + `Wheel Up`    | System Volume Up                                                         |
 | `⊞ Win` + `Ctrl` + `Wheel Down` | Decrease\\Shrink window size                                             |
 | `⊞ Win` + `Ctrl` + `Wheel Up`   | Increase\\Grow window size                                               |
-|                                 |                                                                          |
-| ***CLICK & DRAG***              |                                                                          |
+                                                                                                        
+| ***HOLDING `⊞ Win` + CLICK & DRAG***              |                               |
+| ----- | ----- | 
 | `⊞ Win` + `Left Button`         | Holding `⊞ Win`, Click & Drag with Left Mouse button to MOVE a Window    |
 | `⊞ Win` + `Right Button`        | Holding `⊞ Win`, Click & Drag with Right Mouse button to RESIZE a Window |
 
@@ -158,7 +165,7 @@ These **Click & Drag** Mouse keys will on any window, even if its not active!! T
 
 
 
-> [!note] 
+> [!warning] 
 > **Some of these Hotkeys might conflict Window's pre-set System Hotkeys**
 > 
 >> ^^1 - `⊞ Win` + `C`  Might conflict with Cortana or Copliot
@@ -177,7 +184,17 @@ These **Click & Drag** Mouse keys will on any window, even if its not active!! T
 
 
 
+# Change log...
 
+#### v2 - 06/07/2024
+
+- Added About Message Box
+- Added Cheatsheet Message Box
+- Added Tray Menu R-Click Items
+
+#### v1 - 06/06/2024
+
+- Intinal Relase
 
 
 

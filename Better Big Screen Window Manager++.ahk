@@ -9,20 +9,116 @@ SetWinDelay, -1
 CoordMode, Mouse, Screen
 SendMode Input   ; Recommended for new scripts do to its superior speed and reliability
 SetTitleMatchMode, 2
-
-;menu, tray, icon, %A_WorkingDir%\Images\MoveTo32x32.ico
-
-; local option for icon
-menu, tray, icon, C:\Windows\System32\shell32.dll, 160 ;square move symbol
-
-;  ⊞ Win -- ⊞
-
 ; Am turning off Warnings by default.
 ;Uncomment this line below if the script seems to be misbehaving.
-;#warn  ; Enable warning to assist with decting common errors.
+#warn  ; Enable warning to assist with decting common errors.
+
+; TRAY ICON
+menu, tray, icon, %A_WorkingDir%\Images\MoveTo32x32.ico
+; local option for icon
+;menu, tray, icon, C:\Windows\System32\shell32.dll, 160 ;square move symbol
+; Create the Tray menu
+Menu, Tray, Add
+Menu, Tray, Add, About BBSWM++ // Help, ShowAbout
+Menu, Tray, Add, Hotkey Cheatsheet, ShowCheat
+
+; ABOUT & HELP VAR
+ScriptName := "Better Big Screen Window Manager++"
+ScriptVersion := "v2, 06/07/2024"
+URL := "https://github.com/indigofairyx/Better-Big-Screen-Window-Manager"
+AboutMessage := "
+(
+" ScriptName "
+" ScriptVersion "
+" URL "
+
+Win+Ctrl+Alt+? to view All Hotkeys CheatSheet
+
+Win+Ctrl+Alt+I to visit Github Page
+
+Win+Ctrl+Alt+ESC to Exit Better Big Screen Window Manager++
+
+ESC to Close this Window
+
+Enjoy! :-)
+)"
+
+Cheatsheet := "
+(
++++QUICK HOTKEY CHEATSHEET+++
+Win + Ctrl + Shift + Numpad- to Reload Window Manager Script
+Win + Ctrl + Alt + ESC to Exit Window Manager Script
+Win + Ctrl + Alt + I To Visit Github Page
+Win + Ctrl + Alt + ? to View Qucik Hotkey Cheatsheet Window
+Win + Ctrl + Alt + A to View The About Window
 
 
++++MOUSE FUNCTIONS+++
+Win + Middle Mouse Button to Send window to back\bottom
+Win + Wheel Up to Move window Up
+Win + Wheel Down to Move window Down
+Win + Wheel Left to Move Window Right $ 3
+Win + Wheel Right to Move Window Left $ 3
+Win + Alt + Wheel Down to System Volume Down
+Win + Alt + Wheel Up to System Volume Up
+Win + Ctrl + Wheel Down to Decrease\Shrink window size
+Win + Ctrl + Wheel Up to Increase\Grow window size
 
++++HOLDING 'WIN' + CLICK & DRAG+++
+--This also works Windows which are not active--
+Win + Right Button to RESIZE a Window
+Win + Left Button to MOVE a Window
+
++++HOTKEYS+++
+
+---FAST HOTKEYS---
+Double Tap ESC to close the acive window -- {send-F4}
+Win + C to Center active Window 
+Win + G to Grab\Move\Bring active window to mouse pointer
+Win + Alt + Z to Resize Window to 1280x850 and center
+Win + Z to Resize  Window to 1920x1080 and center
+Win + Ctrl + B to Rezied Window to 2953x1726, Centred & Lowered to taskbar
+Win + Ctrl + R to Restore window from fullscreen
+Win + Page Down to Decrease\Shrink window size
+Win + Page Up to Increase\Grow window size
+
++++NUMPAD HOTKEYS+++
+
+---MOVE ACTIVE WINDOW---
+Win + Numpad 1 to Movie window DOWN & LEFT
+Win + Numpad 2 to Move window DOWN
+Win + Numpad 3 to Movie window DOWN & RIGHT
+Win + Numpad 4 to Move window LEFT
+Win + Numpad 5 to Center window
+Win + Numpad 6 to Move window RIGHT
+Win + Numpad 7 to Movie window UP & LEFT
+Win + Numpad 8 to Move window UP
+Win + Numpad 9 to Movie window DOWN & RIGHT
+Win + Numpad 0 to Restore window from fullscreen
+
+---QUICK ACTIVE WINDOW RESIZING---
+Win + Ctrl + Numpad 0 to Resize Window to 700x400, Centered
+Win + Ctrl + Numpad 1 to Resize Window to 800x600, Centered
+Win + Ctrl + Numpad 2 to Resize Window to 1080x720, Centered
+Win + Ctrl + Numpad 3 to Resize Window to 1224x800, Centered
+Win + Ctrl + Numpad 4 to Resize Window to 1280x850, Centered
+Win + Ctrl + Numpad 5 to Resize Window to 1440x900, Centered
+Win + Ctrl + Numpad 6 to Resize Window to 1600x1000, Centered
+Win + Ctrl + Numpad 7 to Resize Window to 1920x1080, Centered
+Win + Ctrl + Numpad 8 to Resize Window to 2430x1370, Centered
+Win + Ctrl + Numpad 9 to Resize Window to 2800x1790, Centered
+
+---QUICK WINDOW DOCKING\SNAPPING---
+Win + Alt + Numpad 1 to Dock\Snap window bottom-left
+Win + Alt + Numpad 2 to Snap bottom half of the screen
+Win + Alt + Numpad 3 to Dock\Snap window bottom-right
+Win + Alt + Numpad 4 to Snap left half of the screen
+Win + Alt + Numpad 5 to Center window
+Win + Alt + Numpad 6 to Snap right half of the screen
+Win + Alt + Numpad 7 to Dock\Snap window top-left
+Win + Alt + Numpad 8 to Snap top half of the screen
+Win + Alt + Numpad 9 to Dock\Snap window top-right
+)"
 ;***************************************************************************
 ;********************** RUN AS ADMINSTORATOR *******************************
 ;***************************************************************************
@@ -32,12 +128,9 @@ If !A_IsAdmin
 
 ;This admin prompt allows you to move\resize and control windows running in admin mode, ie.. the task manager, Microsoft's own internal config windows, disk clean up and\or program installers etc. Microsoft own windows are one of the worst at popping up in the far corner of large screen. Without Admin evaluation you cannot move windows running in admin mode with hotkeys, only via click & drag with a mouse on the title bar.
 
-
-
 ;***************************************************************************
-;************************** HEADER *****************************************
+;********************************* START ***********************************
 ;***************************************************************************
-
 
 ;font ascii from https://patorjk.com/software/taag/#p=display&h=3&v=2&c=c&f=Doh&t=Window%0AManager%0A
 /*
@@ -83,7 +176,6 @@ If !A_IsAdmin
  *                                                                                          gggggg                                              
  */
  
- 
 ;***************************************************************************
 ;************************* CenterActiveWindow ******************************
 ;***************************************************************************
@@ -103,7 +195,6 @@ If !A_IsAdmin
     WinMove, ahk_id %ActiveWindow%, , %NewX%, %NewY%
 }
 
- 
 ;***************************************************************************
 ;**************************** MOUSE WHEEL FUNCTIONS ************************
 ;***************************************************************************
@@ -268,7 +359,6 @@ MoveWindow(dx, dy) {
 
 #!Numpad5::CenterActiveWindow() ;center window
 #Numpad5::CenterActiveWindow() ;center window
-;#C::CenterActiveWindow() ;center window > NOTE! this Hotkey might conflit with Cortana
 
 GetDPIScale() {
     ; Use DllCall to get the DPI scaling factor
@@ -297,21 +387,7 @@ SnapToScreen4() {
     SysGet, MonitorWorkArea, MonitorWorkArea, 1
     MoveActiveWindowToCoordinates((MonitorWorkAreaRight + MonitorWorkAreaLeft) / 2, (MonitorWorkAreaBottom + MonitorWorkAreaTop) / 2, (MonitorWorkAreaRight - MonitorWorkAreaLeft) / 2, (MonitorWorkAreaBottom - MonitorWorkAreaTop) / 2)
 }
-/*
-CenterActiveWindow() {
-    ; Get the handle of the active window
-    WinGet, ActiveWindow, ID, A
-    ; Get the position and size of the active window
-    WinGetPos, WinX, WinY, WinWidth, WinHeight, ahk_id %ActiveWindow%
-    ; Get the working area width and height (excluding the taskbar)
-    SysGet, MonitorWorkArea, MonitorWorkArea, 1
-    ; Calculate the new position to center the window
-    NewX := (MonitorWorkAreaRight - MonitorWorkAreaLeft - WinWidth) // 2 + MonitorWorkAreaLeft
-    NewY := (MonitorWorkAreaBottom - MonitorWorkAreaTop - WinHeight) // 2 + MonitorWorkAreaTop
-    ; Move the active window to the center of the screen
-    WinMove, ahk_id %ActiveWindow%, , %NewX%, %NewY%
-}
-*/
+
 MoveActiveWindowToCoordinates(x, y, w, h) {
     ; Get the handle of the active window
     WinGet, ActiveWindow, ID, A
@@ -457,7 +533,6 @@ return
     ResizeAndCenterActiveWindow(1280, 720)
 return
 
-
 ;***************************************************************************
 ;************************* Big Centered Lowerd Window **********************
 ;***************************************************************************
@@ -466,7 +541,6 @@ return
 	WinRestore, A
 	WinMove, A, , 455, 388, 2953, 1726
 return
-
 
 ;***************************************************************************
 ;************************* 1 or 2 WINDOW MOVING\DRAGGING *******************
@@ -542,9 +616,38 @@ Loop
 return
 
 ;***************************************************************************
+;************************* SCRIPT FUNCTIONS ********************************
+;***************************************************************************
+
+#!^A:: ;Show About Window
+msgbox, %AboutMessage%
+return
+
+^!#/:: ;Show Hotkey CheatSheet
+msgbox, %Cheatsheet%
+return
+
+^#!I:: ;Go Better Big Screen Window Manager++ Github Page
+run, https://github.com/indigofairyx/Better-Big-Screen-Window-Manager
+return
+
+;Show About\Cheatsheet message box from Tray
+ShowAbout:
+MsgBox, %AboutMessage%
+return
+
+ShowCheat:
+MsgBox, %Cheatsheet%
+return
+
+#^+Numpadsub::Reload ;Reload Window Manager Script
+^!#esc::exitapp ;Exit Window Manager Script
+
+;***************************************************************************
 ;************************** QUICK CLOSE! ***********************************
 ;***************************************************************************
 
+;#If, true
 ~Esc::  ;double tap ESC to close\send-F4 to the Active Window
 WinGet, idOld, ID, A
 KeyWait, Esc
@@ -559,108 +662,6 @@ Send !{F4}
 }
 }
 
-
-
-^+Numpadsub::Reload ;Reload Window Manager Script
-^!#esc::exitapp ;Exit Window Manager Script
-
 ;***************************************************************************
 ;******************************* END ***************************************
 ;***************************************************************************
-
-
-
-;***************************************************************************
-;***************************************************************************
-;***************************************************************************
-
-/*
-QUICK HOTKEY CHEATSHEET
-
-
-SCRIPT CONTROL
-Ctrl + Shift + Numpad - to Reload Window Manager Script
-Ctrl + Alt + ⊞ Win + ESC to Exit Window Manager Script
-
-MOUSE FUNCTIONS  
-⊞ Win + Middle Mouse Button to Send window to back\bottom
-⊞ Win + Wheel Up to Move window Up
-⊞ Win + Wheel Down to Move window Down
-⊞ Win + Wheel Left to Move Window Right $ 3
-⊞ Win + Wheel Right to Move Window Left $ 3
-⊞ Win + Alt + Wheel Down to System Volume Down
-⊞ Win + Alt + Wheel Up to System Volume Up
-⊞ Win + Ctrl + Wheel Down to Decrease\Shrink window size
-⊞ Win + Ctrl + Wheel Up to Increase\Grow window size
-CLICK & DRAG
-⊞ Win + Right Button to Holding ⊞ Win, Click & Drag with Right Mouse button to RESIZE a Window
-⊞ Win + Left Button to Holding ⊞ Win, Click & Drag with Left Mouse button to MOVE a Window
-
-HOTKEYS 
-FAST HOTKEYS
-~ //Double Tap ESC to Double tap ESC to close the acive window -- {send-F4}
-⊞ Win + C to Center active Window  $ 1
-⊞ Win + G to Grab\Move\Bring active window to mouse pointer, works great for small windows $ 2
-⊞ Win + Alt + Z to Resize Active Window to 1280x850 and center
-⊞ Win + Z to Resize Active Window to 1920x1080 and center
-⊞ Win + Ctrl + B to Rezied Active Window to 2953x1726, Centred & Lowered to taskbar
-⊞ Win + Ctrl + R to Restore window from fullscreen
-⊞ Win + Page Down to Decrease\Shrink window size
-⊞ Win + Page Up to Increase\Grow window size
-
-NUMPAD HOTKEYS 
-MOVE ACTIVE WINDOW
-⊞ Win + Numpad 1 to Movie window DOWN & LEFT
-⊞ Win + Numpad 2 to Move window DOWN
-⊞ Win + Numpad 3 to Movie window DOWN & RIGHT
-⊞ Win + Numpad 4 to Move window LEFT
-⊞ Win + Numpad 5 to Center window
-⊞ Win + Numpad 6 to Move window RIGHT
-⊞ Win + Numpad 7 to Movie window UP & LEFT
-⊞ Win + Numpad 8 to Move window UP
-⊞ Win + Numpad 9 to Movie window DOWN & RIGHT
-⊞ Win + Numpad 0 to Restore window from fullscreen
-
-QUICK ACTIVE WINDOW RESIZING
-⊞ Win + Ctrl + Numpad 0 to Resize Active Window to 700x400, centered
-⊞ Win + Ctrl + Numpad 1 to Resize Active Window to 800x600, centered
-⊞ Win + Ctrl + Numpad 2 to Resize Active Window to 1080x720, centered
-⊞ Win + Ctrl + Numpad 3 to Resize Active Window to 1224x800, centered
-⊞ Win + Ctrl + Numpad 4 to Resize Active Window to 1280x850, centered
-⊞ Win + Ctrl + Numpad 5 to Resize Active Window to 1440x900, centered
-⊞ Win + Ctrl + Numpad 6 to Resize Active Window to 1600x1000, centered
-⊞ Win + Ctrl + Numpad 7 to Resize Active Window to 1920x1080, centered
-⊞ Win + Ctrl + Numpad 8 to Resize Active Window to 2430x1370, centered
-⊞ Win + Ctrl + Numpad 9 to Resize Active Window to 2800x1790, centered
-
-QUICK WINDOW DOCKING\SNAPPING
-⊞ Win + Alt + Numpad 1 to Dock\Snap window bottom-left
-⊞ Win + Alt + Numpad 2 to Snap bottom half of the screen
-⊞ Win + Alt + Numpad 3 to Dock\Snap window bottom-right
-⊞ Win + Alt + Numpad 4 to Snap left half of the screen
-⊞ Win + Alt + Numpad 5 to Center window
-⊞ Win + Alt + Numpad 6 to Snap right half of the screen
-⊞ Win + Alt + Numpad 7 to Dock\Snap window top-left
-⊞ Win + Alt + Numpad 8 to Snap top half of the screen
-⊞ Win + Alt + Numpad 9 to Dock\Snap window top-right
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
