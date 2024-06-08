@@ -182,9 +182,14 @@ These **Click & Drag** Mouse keys will on any window, even if its not active!! T
 
 - [ ] coming soon...
 
+# ![icon](/Images/MoveTo32x32.png) Screenshots
+
+> ![about](/Images/Screenshots/Better_Big_Screen_Window_Manager++_About_Box_476x406.png)
+
+> ![cheatsheet](/Images/Screenshots/Better_Big_Screen_Window_Manager++_Cheatsheet_Box_544x1546.png)
 
 
-# Change log...
+# ![icon](/Images/MoveTo32x32.png) Change log...
 
 #### v2 - 06/07/2024
 
